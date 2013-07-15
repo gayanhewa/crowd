@@ -8,15 +8,12 @@ var html;
 fs.readFile(__dirname + '/index.html', 'UTF-8', function (err, data) {
     if (err) {
 	throw err;
-    }
-    html = data;
+    }  
+  html = data;
+  console.log(data);
 });
 
 app.get('/', function(request, response) {
-    
-    response.writeHead(200, {
-	'Content-Type': 'text/html'
-    });
     response.send(html);
 });
 
