@@ -13,10 +13,11 @@ fs.readFile(__dirname + '/index.html', 'UTF-8', function (err, data) {
 });
 
 app.get('/', function(request, response) {
+    
     response.writeHead(200, {
 	'Content-Type': 'text/html'
     });
-    response.send(data);
+    response.send(html);
 });
 
 var port = process.env.PORT || 5000;
