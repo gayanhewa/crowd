@@ -10,7 +10,7 @@ fs.readFile(__dirname + '/index.html', 'UTF-8', function (err, data) {
 	throw err;
     }  
   html = data;
-  console.log(data);
+  //console.log(data);
 });
 
 app.get('/', function(request, response) {
