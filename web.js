@@ -3,9 +3,9 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 var html;
-
+app.use('/public', express.static(__dirname + "/public"));
 // Read HTML into memory.
-fs.readFile(__dirname + '/index.html', 'UTF-8', function (err, data) {
+fs.readFile(__dirname + '/public/index.html', 'UTF-8', function (err, data) {
     if (err) {
 	throw err;
     }  
